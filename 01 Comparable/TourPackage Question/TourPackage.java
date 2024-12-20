@@ -1,4 +1,5 @@
-public class TourPackage implements Comparable<TourPackage>{
+// public class TourPackage implements Comparable<TourPackage>{
+public class TourPackage {
 
     private String packageID;
     private String destination;
@@ -34,10 +35,10 @@ public class TourPackage implements Comparable<TourPackage>{
         this.price = price;
     }
 
-    @Override
-    public int compareTo(TourPackage that){
-        return this.destination.compareTo(that.destination);
-    }
+    // @Override
+    // public int compareTo(TourPackage that){
+    //     return this.destination.compareTo(that.destination);
+    // }
 
     @Override
     public String toString(){

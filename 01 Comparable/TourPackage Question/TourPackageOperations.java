@@ -26,6 +26,7 @@ public class TourPackageOperations{
 
     public void sortPackageByPrice(){
         Collections.sort(packages, Comparator.comparing(TourPackage::getPrice));
+        // Collections.sort(packages, Comparator.comparing(TourPackage::getPrice).reversed());
     }
 
     public void sortPackageById(){
