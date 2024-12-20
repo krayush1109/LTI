@@ -1,4 +1,5 @@
 *.class
+*.code-workspace
 
 target/
 pom.xml.tag
