@@ -21,7 +21,7 @@ class Basics{
         System.out.println(mp.get("Ayu"));
         System.out.println(mp.get("Kum"));
         System.out.println(mp.containsKey("Kum"));
-        System.out.println(mp.containsValue("Kum"));
+        System.out.println(mp.containsValue(45));
 
         
 
