@@ -32,6 +32,7 @@ public class OrderDAO {
         }
         return -1;
     }
+
     public List<Order> getAllOrders() {
         List<Order> order= new ArrayList<>();
         String query=" SELECT * FROM Orders";
@@ -50,6 +51,7 @@ public class OrderDAO {
         }
         return null;
     }
+
     public Order getOrderById(int orderId) {
         String query= "SELECT * FROM Orders WHERE orderId=?";
         try(PreparedStatement ps= connection.prepareStatement(query)){
@@ -70,6 +72,7 @@ public class OrderDAO {
         }
         return null;
     }
+
     public Order updateOrder(Order order){
         String query="UPDATE Orders SET orderId=?, customerName=?, orderTotal=?  WHERE orderId=?";
         try(PreparedStatement ps= connection.prepareStatement(query)){
@@ -85,6 +88,7 @@ public class OrderDAO {
         }
         return null;
     }
+    
     public void deleteOrder(int orderId) {
         String query= "DELETE FROM Orders WHERE orderId=?";
         try(PreparedStatement ps= connection.prepareStatement(query)){
