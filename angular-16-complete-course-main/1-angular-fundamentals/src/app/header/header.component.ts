@@ -6,5 +6,8 @@ import { Component } from "@angular/core";
     styleUrls: ['./header.component.css']
 })
 export class HeaderComponent{
+    h_title = 'My new custom header';
+
+    arr = [11, 22, 33, 44, 55];
 
 }

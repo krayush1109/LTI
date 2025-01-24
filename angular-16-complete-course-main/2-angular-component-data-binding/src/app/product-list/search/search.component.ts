@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-  searchText: string = 'Womens watch';
+
+  errorMsg: string = "Image Not found - custom";
+
+  searchText: string = 'Mens Wrist watch';
 
   updateSearchText(event: any){
       this.searchText = event.target.value;

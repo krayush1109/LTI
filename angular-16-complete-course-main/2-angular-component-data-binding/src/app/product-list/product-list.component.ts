@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
+
 export class ProductListComponent {
   //name="John Smith";
   addToCart:number = 0;
