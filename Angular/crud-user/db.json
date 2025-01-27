@@ -1,0 +1,99 @@
+{
+  "users": [
+    {
+      "name": "John Doe 3.0",
+      "email": "john.doe@example.com",
+      "mobile": "1234567890",
+      "age": 30,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "mobile": "0987654321",
+      "age": 28
+    },
+    {
+      "name": "Alice Brown 2.0",
+      "email": "alice.brown@example.com",
+      "mobile": "1122334455",
+      "age": 35,
+      "id": "3"
+    },
+    {
+      "name": "Ayush",
+      "email": "a@gmail.com",
+      "mobile": "123",
+      "age": "12212",
+      "id": "4fbb"
+    },
+    {
+      "id": "0bab",
+      "name": "Rahul",
+      "email": "r@gmail.com",
+      "mobile": "12345",
+      "age": "15"
+    }
+  ],
+  "posts": [
+    {
+      "postId": 1,
+      "title": "Exploring JSON Data",
+      "authorId": 101,
+      "id": "dfcd"
+    },
+    {
+      "postId": 2,
+      "title": "Best Coding Practices",
+      "authorId": 102,
+      "id": "b834"
+    },
+    {
+      "postId": 3,
+      "title": "Understanding APIs",
+      "authorId": 103,
+      "id": "45a6"
+    }
+  ],
+  "comments": [
+    {
+      "commentId": 201,
+      "postId": 1,
+      "authorId": 104,
+      "id": "0a30"
+    },
+    {
+      "commentId": 202,
+      "postId": 1,
+      "authorId": 105,
+      "id": "0895"
+    },
+    {
+      "commentId": 203,
+      "postId": 2,
+      "authorId": 106,
+      "id": "6b63"
+    }
+  ],
+  "profiles": [
+    {
+      "userId": 101,
+      "userName": "JohnDoe",
+      "email": "john.doe@example.com",
+      "id": "524b"
+    },
+    {
+      "userId": 102,
+      "userName": "JaneSmith",
+      "email": "jane.smith@example.com",
+      "id": "7acc"
+    },
+    {
+      "userId": 103,
+      "userName": "AliceBrown",
+      "email": "alice.brown@example.com",
+      "id": "a006"
+    }
+  ]
+}

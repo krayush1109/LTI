@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <h2>Survey Feedback Form</h2>
+    <form #surveyForm="ngForm" (submit)="onMySubmit(surveyForm)" >
+
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" name="username1" class="form-control" ngModel required>
+            <div class="text-danger" id="username-error" style="display: none;">Username is required</div>
+        </div>
+        <div class="mb-3">
+            <label for="feedback" class="form-label">Feedback</label>
+            <textarea id="feedback" name="feedback" class="form-control" ngModel required ></textarea>
+            <div class="text-danger" id="feedback-error" style="display: none;">Feedback is required</div>
+        </div>
+
+        <!-- <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button> -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+    <!-- <div  id="submitted-feedback" class="mt-4"> -->
+    <div *ngIf="submitted" id="submitted-feedback" class="mt-4">
+    <!-- <div *ngIf="surveyForm.submitted && surveyForm.valid" id="submitted-feedback" class="mt-4"> -->
+        <h3>Submitted Feedback</h3>
+        <p><strong>Username:</strong> <span id="submitted-username" > {{ username }} </span></p>
+        <p><strong>Feedback:</strong> <span id="submitted-feedback-text"> {{ feedback }} </span></p>
+    </div>
+    
+</div>

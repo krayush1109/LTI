@@ -1,0 +1,55 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name">
+    </div>
+  
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email">
+    </div>
+  
+    <div>
+      <label for="mobile">Mobile:</label>
+      <input id="mobile" formControlName="mobile">
+    </div>
+  
+    <div>
+      <label for="age">Age:</label>
+      <input id="age" formControlName="age">
+    </div>
+  
+    <button type="submit" [disabled]="editMode" >Submit</button>
+    <button type="button" [disabled]="!editMode" (click)="onUpdateBtnClicked()" >Update</button>
+  </form>
+
+  <hr>
+
+  <div>
+    <h2>All Users</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.mobile }}</td>
+          <td>{{ user.age }}</td>
+
+          <button (click)="editUser(user.id)">Edit</button>
+          <button (click)="deleteUser(user.id)">Delete</button>          
+
+        </tr>
+      </tbody>
+    </table>
+  </div>

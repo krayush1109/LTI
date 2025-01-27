@@ -1,3 +1,5 @@
+
+
 .container {
   position: relative;
   max-width: 700px;
@@ -142,7 +144,8 @@ small{
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background-color: #282C35;
+  /* background-color: #282C35; */
+  background-color: white;
   font-size: 75px;
   font-weight: bold;
   padding: 40px 40px;
@@ -163,3 +166,4 @@ span{
   padding: 5px 5px;
   font-weight: bold;
 }
+

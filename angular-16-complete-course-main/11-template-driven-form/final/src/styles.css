@@ -12,5 +12,6 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: #282C35;
+  /* background: #282C35; */
+  background: white;
 }
