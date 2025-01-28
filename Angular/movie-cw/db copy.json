@@ -1,0 +1,40 @@
+{
+    "movies": [
+      {
+        "id": 1,
+        "title": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010
+      },
+      {
+        "id": 2,
+        "title": "The Dark Knight",
+        "director": "Christopher Nolan",
+        "year": 2008
+      },
+      {
+        "id": 3,
+        "title": "Interstellar",
+        "director": "Christopher Nolan",
+        "year": 2014
+      },
+      {
+        "id": 4,
+        "title": "The Prestige",
+        "director": "Christopher Nolan",
+        "year": 2006
+      },
+      {
+        "id": 5,
+        "title": "Memento",
+        "director": "Christopher Nolan",
+        "year": 2000
+      },
+      {
+        "id": 6,
+        "title": "Dunkirk",
+        "director": "Christopher Nolan",
+        "year": 2017
+      }
+    ]
+  }
