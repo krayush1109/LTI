@@ -31,10 +31,10 @@ export class EditMovieComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const movieId = +this.route.snapshot.paramMap.get('id')!;
+    this.movieId = this.route.snapshot.paramMap.get('id')!;
 
-    this.movieService.getMovie(this.movieId).subscribe((data)=> {
-      this.movieForm.patchValue(data);
+    this.movieService.getMovie(this.movieId).subscribe(movie=> {
+      this.movieForm.patchValue(movie);
     })
 
   }
@@ -42,9 +42,8 @@ export class EditMovieComponent implements OnInit {
   updateMovieBtn(): void {
 
     if(this.movieForm.valid){
-      this.movieService.updateMovie({...this.movieForm.value, id: this.movieId})
-      
-      this.movieService.updateMovie(this.movieForm.value).subscribe((data) => {
+      this.movieService.updateMovie({...this.movieForm.value, id: this.movieId}).subscribe(() => {      
+            
         this.router.navigate(['/']);
       })
     }

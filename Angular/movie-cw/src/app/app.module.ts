@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MovieAddComponent } from './components/movie-add/movie-add.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditMovieComponent } from './components/edit-movie/edit-movie.component';
 
 @NgModule({
@@ -21,7 +21,8 @@ import { EditMovieComponent } from './components/edit-movie/edit-movie.component
     AppRoutingModule,
 
     HttpClientModule, // add this manually
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+.searchBox{
+
+    display: flex;
+    /* border: 2px solid red; */
+    width: 50vw;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.searchBox > input {
+    height: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}

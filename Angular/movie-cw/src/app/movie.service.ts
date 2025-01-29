@@ -12,7 +12,6 @@ import { Movie } from './models/Movie.model';
 // }
 
 
-
 @Injectable({
   providedIn: 'root'
 })
