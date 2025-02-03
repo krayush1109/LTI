@@ -33,10 +33,17 @@ export class MovieListComponent implements OnInit{
 
   // end ----------- searching sorting ---------------
 
-  constructor( private movieService: MovieService, private router: Router ){ }
+  constructor( private movieService: MovieService, private router: Router ){ }  
 
   ngOnInit(): void {
-    this.reloadMovies();
+    // 1 ..............
+    this.movieService.getMovies().subscribe( (data) => {
+      // this.movies = data;
+      this.filteredMovies = data;      
+    } )
+
+    // 2..............
+    // this.reloadMovies();
   }
 
   reloadMovies(): void {
@@ -63,7 +70,8 @@ export class MovieListComponent implements OnInit{
   }
 
   editMovie(id: any): void {
-    this.router.navigate([`/edit/${id}`]);
+    // this.router.navigate([`/edit/${id}`]);
+    this.router.navigateByUrl(`/edit/${id}`);
   }
 
 }

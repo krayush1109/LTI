@@ -1,0 +1,11 @@
+<!-- src/app/library/library.component.html -->
+
+<div class="container">
+    <h2>Library</h2>
+    <ul class="list-group">
+      <li *ngFor="let book of books" class="list-group-item">
+        <a [routerLink]="['/book-details', book.id]">{{ book.title }}</a>
+      </li>
+    </ul>
+  </div>
+  

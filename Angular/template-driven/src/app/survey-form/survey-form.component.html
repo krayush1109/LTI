@@ -1,0 +1,34 @@
+<p>survey-form works!</p>
+
+<h2>Survey Form</h2>
+
+<form #surveyForm="ngForm" (submit)="onFrmSubmit(surveyForm)" >
+    <div>
+        <label for="username" >Username</label>
+        <input type="text" id="username" name="username" class="form-control" ngModel required>
+        <div *ngIf="(surveyForm.submitted || surveyForm.controls['username']?.invalid) && surveyForm.controls['username']?.touched" >Username is required</div>
+    </div>
+
+    <div>
+        <label for="feedback" >Feedback</label>
+        <input type="text" name="feedback" id="feedback" name="feedback" ngModel required>
+    </div>
+
+    <!-- <button type="submit" [disabled]=true >Submit</button> -->
+    <!-- <button type="submit" [disabled]=false >Submit</button> -->
+    <button type="submit" [disabled]="surveyForm.invalid" >Submit</button>
+    <button type="button" [disabled]="surveyForm.invalid" (click)="handleReset(surveyForm)" >Reset</button>
+
+</form>
+
+<div *ngIf="username && feedback" >
+    <h2>Survey Records</h2>
+
+    <div>
+        <strong>Username: </strong> {{ username }}
+    </div>
+    <div>
+        <strong>Feedback: </strong> {{ feedback }}
+    </div>
+    
+</div>
