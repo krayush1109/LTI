@@ -1,0 +1,12 @@
+<div>
+    <input type="text" id="searchTerm" [(ngModel)]="searchTerm">
+    <div>
+        <div *ngFor="let course of fc | filter : searchTerm">
+            <h3>{{course.title}}</h3>
+            <p>{{course.instructor}}</p>
+            <p>{{course.description}}</p>
+            <p><strong>Duration:</strong>{{course.duration}} hours</p>
+            <p><strong>Rating:</strong>{{ course.userRating}}</p>
+        </div>
+    </div>
+</div>

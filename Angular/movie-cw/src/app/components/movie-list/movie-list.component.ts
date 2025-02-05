@@ -12,7 +12,7 @@ export class MovieListComponent implements OnInit{
 
   movies: Movie[] = [];
 
-  // start ----------- searching sorting ---------------
+  // start ----------- Searching  ---------------
   searchTxt: string = "";
   filteredMovies: Movie[] = [];
 
@@ -31,19 +31,37 @@ export class MovieListComponent implements OnInit{
 
   }
 
-  // end ----------- searching sorting ---------------
+  // end ----------- searching  ---------------
+
+  // start ========= SORTING ===============
+  // sort movies by selected order
+  sortBy = 'title';
+  sortByCategory(event: any) : void {
+    const category = (event.target as HTMLInputElement).value;
+    console.log("Sorting by ", category);
+
+    this.filteredMovies.sort((a,b) => {
+      // if(a[category as keyof Movie] < b[category as keyof Movie]) return -1;
+      if(a[category] > b[category] ) return 1;
+      if(a[category] > b[category] ) return 1;
+      return 0;
+    } )
+  }
+
+  // end ========= SORTING ===============
+
 
   constructor( private movieService: MovieService, private router: Router ){ }  
 
   ngOnInit(): void {
     // 1 ..............
-    this.movieService.getMovies().subscribe( (data) => {
-      // this.movies = data;
-      this.filteredMovies = data;      
-    } )
+    // this.movieService.getMovies().subscribe( (data) => {
+    //   // this.movies = data;
+    //   this.filteredMovies = data;      
+    // } )
 
     // 2..............
-    // this.reloadMovies();
+    this.reloadMovies();
   }
 
   reloadMovies(): void {

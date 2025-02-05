@@ -1,0 +1,39 @@
+<p>list-room works!</p>
+
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Floor</th>
+            <th>Capacity</th>
+            <th>Last Inspection</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let room of rooms" >
+            <td>{{ room.id }}</td>            
+            <td>{{ room.name }}</td>
+            <td>{{ room.floor }}</td>
+            <td>{{ room.capacity }}</td>
+            <td>{{ room.lastInspection }}</td>
+            <td>{{ room.status }}</td>
+
+            <td>
+                <a routerLink="/view/{{room.id}}" >View</a> &nbsp;
+                <a routerLink="/edit/{{room.id}}" >Edit</a> &nbsp;
+                <a routerLink="/" (click)="handleDelete(room.id)" >Delete</a> &nbsp;
+            </td>
+
+        </tr>
+    </tbody>
+    
+
+</table>
+
+<button routerLink="/add" > Add Room </button>

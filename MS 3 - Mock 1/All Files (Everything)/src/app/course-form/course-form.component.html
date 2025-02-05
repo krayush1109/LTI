@@ -1,0 +1,47 @@
+<div>
+    <form [formGroup]="courseForm" (submit)="onSubmit()">
+        <div>
+            <label for="title">Course Title</label>
+            <input type="text" id="title" formControlName="title">
+            <div *ngIf="courseForm.get('title')?.touched && courseForm.get('title')?.invalid">
+                Title is required.
+            </div>
+        </div>
+        <div>
+            <label for="instructor">Instructor</label>
+            <input type="text" id="instructor" formControlName="instructor">
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <input type="text" id="description" formControlName="description">
+
+        </div>
+        <div>
+            <label for="duration">Duration (hours)</label>
+            <input type="number" id="duration" formControlName="duration">
+            <div *ngIf="courseForm.get('duration')?.touched && courseForm.get('duration')?.invalid">
+                Duration must be a positive number between 1 and 100.
+            </div>
+        </div>
+        <label for="difficulty">Difficulty Level</label>
+        <select id="difficulty" formControlName="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <div>
+            <label for="userRating">User Rating</label>
+            <input type="number" id="userRating" formControlName="userRating">
+            <div *ngIf="courseForm.get('userRating')?.touched && courseForm.get('userRating')?.invalid">
+                Rating must be between 1 and 5.
+            </div>
+        </div>
+        <button type="submit" [disabled]="!courseForm.valid">
+            Add Course
+        </button>
+    </form>
+    <div *ngIf="showAlert">
+        {{successMessage}}
+        <button (click)="closeAlert()">Close</button>
+    </div>
+</div>

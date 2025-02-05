@@ -1,0 +1,34 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Introduction to Angular",
+      "instructor": "Jane Doe",
+      "description": "Learn the basics of Angular, a popular framework for building web applications.",
+      "duration": 5,
+      "difficulty": "easy",
+      "userRating": 4.5,
+      "enrollmentCount": 150
+    },
+    {
+      "title": "Commodi accusantium ",
+      "instructor": "Quaerat temporibus q",
+      "description": "Quaerat sunt culpa ",
+      "duration": 36,
+      "difficulty": "hard",
+      "userRating": 2,
+      "enrollmentCount": 0,
+      "id": 2
+    },
+    {
+      "title": "Commodi ex pariatur",
+      "instructor": "Officia recusandae ",
+      "description": "Hic culpa debitis i",
+      "duration": 43,
+      "difficulty": "medium",
+      "userRating": 2,
+      "enrollmentCount": 0,
+      "id": 3
+    }
+  ]
+}

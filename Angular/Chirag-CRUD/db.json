@@ -1,0 +1,28 @@
+{
+  "rooms": [
+    {
+      "id": "e744",
+      "name": "Michael",
+      "floor": "3rd Floor",
+      "capacity": "12",
+      "status": "Under Maintenance",
+      "lastInspection": "Tue Jan 28 2025"
+    },
+    {
+      "name": "Hehee",
+      "floor": "2nd Floor",
+      "capacity": "12",
+      "lastInspection": "2025-02-05",
+      "status": "Under Maintenance",
+      "id": "c357"
+    },
+    {
+      "name": "Jason Moon",
+      "floor": "2nd Floor",
+      "capacity": "12",
+      "lastInspection": "2025-02-06",
+      "status": "Available",
+      "id": "070b"
+    }
+  ]
+}

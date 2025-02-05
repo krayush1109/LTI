@@ -1,0 +1,47 @@
+{
+
+    "rooms": [
+
+        {
+            "id":   "1",
+            "name": "Rameshwaram",
+            "floor": "3",
+            "capacity": 5,
+            "lastInspection": "2025-11-10",
+            "status": "Not Booked"
+        },
+        {
+            "id":   "2",
+            "name": "Moreshwar",
+            "floor": "4",
+            "capacity": 3,
+            "lastInspection": "2025-01-21",
+            "status": "Booked"
+        },
+        {
+            "id":   "3",
+            "name": "Pallava",
+            "floor": "1",
+            "capacity": 7,
+            "lastInspection": "2025-02-04",
+            "status": "Not Booked"
+        },        
+        {
+            "id":   "4",
+            "name": "Pallava",
+            "floor": "1",
+            "capacity": 7,
+            "lastInspection": "2025-02-04",
+            "status": "Not Booked"
+        },        
+        {
+            "id":   "5",
+            "name": "Pallava",
+            "floor": "1",
+            "capacity": 7,
+            "lastInspection": "2025-02-04",
+            "status": "Not Booked"
+        }        
+    ]
+
+}

@@ -1,0 +1,36 @@
+<p>add-room works!</p>
+
+<form   [formGroup]="roomFrm" (submit)="handleSubmit()" >
+
+    <div>
+        <label for="" >Name : </label>
+        <input type="text" name="" id="" formControlName="name" >
+    </div>
+
+    <div>
+        <label for="">Floor</label>
+        <input type="text" name="" id="" formControlName="floor" >
+    </div>
+
+    <div>
+        <label for="">Capacity</label>
+        <input type="number" name="" id="" formControlName="capacity">
+    </div>
+
+    <div>
+        <label for="">Last Inspection Date</label>
+        <input type="date" name="" id="" formControlName="lastInspection">
+    </div>
+
+    <div>
+        <label for="">Status: </label>
+        <label for="">
+            <input type="radio" name="status" formControlName="status" value="Booked" id=""> Booked
+        </label>
+        <label for="">
+            <input type="radio" name="status" formControlName="status" value="Demo Visit" id=""> Demo Visit
+        </label>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>

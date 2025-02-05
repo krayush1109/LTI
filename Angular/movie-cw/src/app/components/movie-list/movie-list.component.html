@@ -1,9 +1,26 @@
 <div class="movie-list">
+  <!-- SEARCHING -->
   <div class="searchBox">
     <h2>Movies</h2>
-
+    
     <input type="text" placeholder="search" [(ngModel)]="searchTxt" (input)="filterMovies()" >
   </div>
+  <!-- SEARCHING -->
+
+  <!-- SORTING -->
+  <div class="">
+    <label for="">Sort</label>
+    <select name="" id="" (change)="sortByCategory($event)" >
+      <option value="">Select</option>
+      <option value="id">ID</option>
+      <option value="title">Title</option>
+      <option value="director">Director</option>
+      <option value="year">Year</option>
+    </select>
+  </div>
+
+  <!-- SORTING -->
+
   <button routerLink="/add" class="btn btn-primary">Add Movie</button>
   <table class="table mt-3">
     <thead>

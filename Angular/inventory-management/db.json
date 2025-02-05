@@ -1,0 +1,36 @@
+{
+  "rooms": [
+    {
+      "id": "1",
+      "name": "Rameshwaram",
+      "floor": "3",
+      "capacity": 5,
+      "lastInspection": "2025-11-10",
+      "status": "Not Booked"
+    },
+    {
+      "id": "2",
+      "name": "Moreshwar",
+      "floor": "4",
+      "capacity": 3,
+      "lastInspection": "2025-01-21",
+      "status": "Booked"
+    },
+    {
+      "name": "aaaaaaa",
+      "floor": "twelve floor",
+      "capacity": 121,
+      "lastInspection": "2025-02-22",
+      "status": "Demo Visit",
+      "id": "52a1"
+    },
+    {
+      "id": "809b",
+      "name": "dkljf",
+      "floor": "dkfjdkj",
+      "capacity": 23,
+      "lastInspection": "2025-02-02",
+      "status": "Booked"
+    }
+  ]
+}

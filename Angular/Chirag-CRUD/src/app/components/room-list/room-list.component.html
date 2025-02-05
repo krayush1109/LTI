@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row">
+    <div class="">
+      <label for="">Sort</label>
+      <select name="" (change)="onChangeSort($event)" id="">
+        <option value=""></option>
+        <option value="id">ID</option>
+        <option value="name">Name</option>
+        <option value="floor">Floor</option>
+        <option value="capacity">Capacity</option>
+        <option value="lastInspection">Last Inspection</option>
+      </select>
+    </div>
+    <div class="col-md-12">
+      <div class="d-flex justify-content-between">
+        <h3 class="text-center">Room List</h3>
+        <div class="">
+          <input
+            type="text"
+            class="p-2 border-rounded h-2 inputGroup-sizing-sm"
+            placeholder="Search"
+            [(ngModel)]="searchText"
+            (keydown)="onSearch()"
+          />
+          <button class="btn btn-primary mx-2" (click)="onSort()">Sort</button>
+        </div>
+      </div>
+      <table class="mt-2 table table-striped align-items-center">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Floor</th>
+            <th>Capacity</th>
+            <th>Last Inspection</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let room of rooms">
+            <td>{{ room.id }}</td>
+            <td>{{ room.name }}</td>
+            <td>{{ room.floor }}</td>
+            <td>{{ room.capacity }}</td>
+            <td>{{ room.lastInspection }}</td>
+            <td
+              [ngClass]="
+                room.status === 'Available' ? 'text-success' : 'text-danger'
+              "
+            >
+              {{ room.status }}
+            </td>
+            <td class="d-grid gap-2 d-md-block">
+              <button
+                class="btn btn-warning mx-2"
+                type="button"
+                (click)="onEdit(room.id)"
+              >
+                Edit
+              </button>
+              <button
+                class="btn btn-danger"
+                type="button"
+                (click)="onDelete(room.id)"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
